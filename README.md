@@ -10,6 +10,7 @@ Ici, nous traitons un problème de régression, c'est donc le premier qui sera u
 Les décisions possibles sont situées aux extrémités des branches (les « feuilles » de l’arbre) et sont atteintes en fonction de décisions prises à chaque étape. 
 Un arbre de décision fonctionne en appliquant de manière itérative des règles logiques très simples, chaque règle étant choisie en fonction du résultat de la règle précédente. 
 Les arbres de décision ont pour avantage d’être simple à interpréter, très rapide à entrainer, d’être non paramétrique, et de nécessiter très peu de prétraitement des données.
+
 ![img](images/decision-tree.png)
 
 ### Random Forest
@@ -19,7 +20,9 @@ Une décision est alors prise en faisant « voter » l’ensemble des arbres et 
 
 L’algorithme des « forêts aléatoires » (ou Random Forest parfois aussi traduit par forêt d’arbres décisionnels) est un algorithme de classification qui réduit la variance des prévisions d’un arbre de décision seul, améliorant ainsi leurs performances.
 Cet algorithme effectue un apprentissage en parallèle sur de multiples arbres de décision construits aléatoirement et entraînés sur des sous-ensembles de données différents. 
+
 ![img](images/forest.png)
+
 Le nombre idéal d’arbres est un paramètre important : il est très variable et dépend du problème. 
 Concrètement, chaque arbre de la forêt aléatoire est entrainé sur un sous ensemble aléatoire de features  selon le principe des « projections aléatoires ». Les prédictions sont ensuite moyennées (lorsque les données sont quantitatives) ou utilisés pour un "vote" (pour des données qualitatives, dans le cas des arbres de classification). 
 L’algorithme des forêts aléatoires est connu pour être un des classifieurs les plus efficaces parmis ceux qui nécessitent peu de prétraitement des données. 
