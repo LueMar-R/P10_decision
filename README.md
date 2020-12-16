@@ -25,10 +25,21 @@ Concrètement, chaque arbre de la forêt aléatoire est entrainé sur un sous en
 L’algorithme des forêts aléatoires est connu pour être un des classifieurs les plus efficaces parmis ceux qui nécessitent peu de prétraitement des données. 
 
 
-### Etude du dataset "California Housing"
+## Etude du dataset "California Housing"
 
+### Analyse des données
 
+_Histogrammes_
 
+![hist](images/Histo1.png)
+
+la visualisation des histogrammes montre que :
+* __Longitude__ : Distribution bimodale. La répartition Est-ouest des maisons montre deux pics d'intensité autour de 122°W et 118°W, avec une densité nettement moins importante entre les deux, autour de 120°W. Géographiquement, ces zones où les maisons sont plus nombreuses (donc, on peut le supposer, plus fortement peuplées) correspondent en effet à la côte pacifique (~122°W), avec les baies de Los Angeles et San Francisco, et aux vallées de Sacramento et de San Joaquim (~118°w). Entre ces deux zones s'élève les montagnes côtières (coast range) et à l'ouest la chaîne de montagne qui borde le désert (sierra range).
+* __Latitude__ : de la mème façon, il y a deux pics de densité autour de 34°N et 38°N (distribution bimodale), soit aux niveau de San Francisco-Sacramento, et Los Angeles plus au sud.
+* __Âge moyen__ des maisons : Réparti de 0 (maisons neuves) à 52 ans environ. Nombre important de maisons ayant entre 15 et 40 ans, mais sans linéarité dans la progression. Peu de maisons neuves. Pic à 52 ans : il serait nécessaire de se documenter pour voir s'il y a une raison à cela ou s'il s'agit d'outliers.
+* __nombre total de pièces__ dans un bloc, __nombre total de chambres__, __population__ et __nombre de foyers__ : on toutes des distributions asymétriques, courbes obliques à gauche.
+* __Revenu moyen__ des foyers au sein d'un bloc : Etalé entre 0.5 et 15 (tens of thousands of US Dollars) la médiane se situant autour de 3.5. Distribution asymétrique mais plus répartie que les précédentes.
+* __Valeur moyenne des maisons__ (target) : asymetrique oblique a gauche, de 20k$ à 50k$ avec une médiane à 180k$. Dispersion plus étalée que les précédentes. Remontée brutale à 50k$ : outliers ?
 
 
 
